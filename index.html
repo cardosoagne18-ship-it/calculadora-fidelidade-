@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Multa de Fidelidade</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📄 Calculadora de Multa de Fidelidade</h1>
+
+<div class="campo">
+<label>Valor da Multa Total (R$)</label>
+<input type="number" id="multaTotal" value="300">
+</div>
+
+<div class="campo">
+<label>Fidelidade (Meses)</label>
+<input type="number" id="fidelidade" value="12">
+</div>
+
+<div class="campo">
+<label>Data do Contrato</label>
+<input type="date" id="contrato">
+</div>
+
+<div class="campo">
+<label>Data do Cancelamento</label>
+<input type="date" id="cancelamento">
+</div>
+
+<button onclick="calcular()">CALCULAR</button>
+
+<div id="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
