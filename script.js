@@ -1,92 +1,121 @@
-function calcular(){
+function calcular() {
 
-const multaTotal = Number(document.getElementById("multaTotal").value);
-const fidelidade = Number(document.getElementById("fidelidade").value);
+    const multaTotal = Number(
+        document.getElementById("multaTotal").value
+    );
 
-const contrato = document.getElementById("contrato").value;
-const cancelamento = document.getElementById("cancelamento").value;
+    const fidelidade = Number(
+        document.getElementById("fidelidade").value
+    );
 
-if(!contrato || !cancelamento){
+    const contrato = document.getElementById("contrato").value;
+    const cancelamento = document.getElementById("cancelamento").value;
 
-alert("Informe as datas.");
-return;
+    if (!contrato || !cancelamento) {
+        alert("Informe as datas.");
+        return;
+    }
 
-}
+    if (!fidelidade || fidelidade <= 0) {
+        alert("Informe um período de fidelidade válido.");
+        return;
+    }
 
-const c = contrato.split("-");
-const x = cancelamento.split("-");
+    const dataContrato = contrato.split("-");
+    const dataCancelamento = cancelamento.split("-");
 
-const ano1 = Number(c[0]);
-const mes1 = Number(c[1]);
-const dia1 = Number(c[2]);
+    const anoContrato = Number(dataContrato[0]);
+    const mesContrato = Number(dataContrato[1]);
+    const diaContrato = Number(dataContrato[2]);
 
-const ano2 = Number(x[0]);
-const mes2 = Number(x[1]);
-const dia2 = Number(x[2]);
+    const anoCancelamento = Number(dataCancelamento[0]);
+    const mesCancelamento = Number(dataCancelamento[1]);
+    const diaCancelamento = Number(dataCancelamento[2]);
 
-// Cálculo em calendário comercial (30 dias por mês)
+    let meses = 
+        (anoCancelamento - anoContrato) * 12 +
+        (mesCancelamento - mesContrato);
 
-let meses = (ano2-ano1)*12 + (mes2-mes1);
-let dias = dia2-dia1;
+    let dias = diaCancelamento - diaContrato;
 
-if(dias<0){
+    if (dias < 0) {
+        dias += 30;
+        meses--;
+    }
 
-dias+=30;
-meses--;
+    if (meses < 0) {
+        alert("A data de cancelamento não pode ser anterior à data do contrato.");
+        return;
+    }
 
-}
+    let diasUtilizados = (meses * 30) + dias;
 
-if(meses<0){
+    const diasTotais = fidelidade * 30;
 
-alert("Datas inválidas.");
-return;
+    if (diasUtilizados > diasTotais) {
+        diasUtilizados = diasTotais;
+    }
 
-}
+    const mesesUtilizados = Math.floor(diasUtilizados / 30);
+    const diasUsados = diasUtilizados % 30;
 
-let diasUtilizados=(meses*30)+dias;
+    const diasRestantes = diasTotais - diasUtilizados;
 
-const diasTotais=fidelidade*30;
+    const mesesRestantes = Math.floor(diasRestantes / 30);
+    const diasRestantesDoMes = diasRestantes % 30;
 
-if(diasUtilizados>diasTotais)
-diasUtilizados=diasTotais;
+    const multa = (diasRestantes / diasTotais) * multaTotal;
 
-let mesesUtilizados=Math.floor(diasUtilizados/30);
-let diasUsados=diasUtilizados%30;
+    const multaTotalFormatada = multaTotal.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
 
-let diasRestantes=diasTotais-diasUtilizados;
+    const multaFormatada = multa.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
 
-let mesesRestantes=Math.floor(diasRestantes/30);
-let diasRest=diasRestantes%30;
+    document.getElementById("resultado").innerHTML = `
+        <h2>Resultado</h2>
 
-let multa=(diasRestantes/diasTotais)*multaTotal;
+        <p>
+            <strong>Multa contratual:</strong>
+            R$ ${multaTotalFormatada}
+        </p>
 
-document.getElementById("resultado").innerHTML=`
+        <p>
+            <strong>Dias utilizados:</strong>
+            ${diasUtilizados}
+        </p>
 
-<h2>Resultado</h2>
+        <p>
+            <strong>Tempo utilizado:</strong>
+            <span class="info">
+                ${mesesUtilizados} meses e ${diasUsados} dias
+            </span>
+        </p>
 
-<p><strong>Dias utilizados:</strong> ${diasUtilizados}</p>
+        <p>
+            <strong>Dias restantes:</strong>
+            ${diasRestantes}
+        </p>
 
-<p><strong>Tempo utilizado:</strong>
-<span class="info">${mesesUtilizados} meses e ${diasUsados} dias</span>
-</p>
+        <p>
+            <strong>Tempo restante:</strong>
+            <span class="info">
+                ${mesesRestantes} meses e ${diasRestantesDoMes} dias
+            </span>
+        </p>
 
-<p><strong>Dias restantes:</strong> ${diasRestantes}</p>
+        <hr>
 
-<p><strong>Tempo restante:</strong>
-<span class="info">${mesesRestantes} meses e ${diasRest} dias</span>
-</p>
+        <p>
+            <strong>Valor da Multa:</strong>
+        </p>
 
-<hr>
-
-<p><strong>Valor da Multa:</strong></p>
-
-<p class="valor">
-R$ ${multa.toLocaleString('pt-BR',{
-minimumFractionDigits:2,
-maximumFractionDigits:2
-})}
-</p>
-
-`;
-
+        <p class="valor">
+            R$ ${multaFormatada}
+        </p>
+    `;
 }

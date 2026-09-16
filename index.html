@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de Multa de Fidelidade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Multa de Fidelidade</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1>📄 Calculadora de Multa de Fidelidade</h1>
+        <h1>📄 Calculadora de Multa de Fidelidade</h1>
 
-<div class="campo">
-<label>Valor da Multa Total (R$)</label>
-<input type="number" id="multaTotal" value="300">
-</div>
+        <div class="campo">
+            <label for="multaTotal">Valor da Multa Total</label>
 
-<div class="campo">
-<label>Fidelidade (Meses)</label>
-<input type="number" id="fidelidade" value="12">
-</div>
+            <select id="multaTotal">
+                <option value="300">R$ 300,00</option>
+                <option value="900">R$ 900,00</option>
+            </select>
+        </div>
 
-<div class="campo">
-<label>Data do Contrato</label>
-<input type="date" id="contrato">
-</div>
+        <div class="campo">
+            <label for="fidelidade">Fidelidade (Meses)</label>
 
-<div class="campo">
-<label>Data do Cancelamento</label>
-<input type="date" id="cancelamento">
-</div>
+            <input
+                type="number"
+                id="fidelidade"
+                value="12"
+                min="1"
+            >
+        </div>
 
-<button onclick="calcular()">CALCULAR</button>
+        <div class="campo">
+            <label for="contrato">Data do Contrato</label>
 
-<div id="resultado"></div>
+            <input
+                type="date"
+                id="contrato"
+            >
+        </div>
 
-</div>
+        <div class="campo">
+            <label for="cancelamento">Data do Cancelamento</label>
 
-<script src="script.js"></script>
+            <input
+                type="date"
+                id="cancelamento"
+            >
+        </div>
+
+        <button type="button" onclick="calcular()">
+            CALCULAR
+        </button>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
