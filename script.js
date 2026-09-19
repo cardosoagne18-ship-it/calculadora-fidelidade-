@@ -32,7 +32,7 @@ function calcular() {
     const mesCancelamento = Number(dataCancelamento[1]);
     const diaCancelamento = Number(dataCancelamento[2]);
 
-    let meses = 
+    let meses =
         (anoCancelamento - anoContrato) * 12 +
         (mesCancelamento - mesContrato);
 
