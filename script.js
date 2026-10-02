@@ -77,45 +77,48 @@ function calcular() {
     });
 
     document.getElementById("resultado").innerHTML = `
+
         <h2>Resultado</h2>
 
-        <p>
+        <div class="resultado-item">
             <strong>Multa contratual:</strong>
-            R$ ${multaTotalFormatada}
-        </p>
+            <span>R$ ${multaTotalFormatada}</span>
+        </div>
 
-        <p>
+        <div class="resultado-item">
             <strong>Dias utilizados:</strong>
-            ${diasUtilizados}
-        </p>
+            <span>${diasUtilizados}</span>
+        </div>
 
-        <p>
+        <div class="resultado-item">
             <strong>Tempo utilizado:</strong>
             <span class="info">
                 ${mesesUtilizados} meses e ${diasUsados} dias
             </span>
-        </p>
+        </div>
 
-        <p>
+        <div class="resultado-item">
             <strong>Dias restantes:</strong>
-            ${diasRestantes}
-        </p>
+            <span>${diasRestantes}</span>
+        </div>
 
-        <p>
+        <div class="resultado-item">
             <strong>Tempo restante:</strong>
             <span class="info">
                 ${mesesRestantes} meses e ${diasRestantesDoMes} dias
             </span>
-        </p>
+        </div>
 
         <hr>
 
-        <p>
-            <strong>Valor da Multa:</strong>
-        </p>
+        <div class="resultado-multa">
 
-        <p class="valor">
-            R$ ${multaFormatada}
-        </p>
+            <strong>Valor da Multa:</strong>
+
+            <span class="valor">
+                R$ ${multaFormatada}
+            </span>
+
+        </div>
     `;
 }

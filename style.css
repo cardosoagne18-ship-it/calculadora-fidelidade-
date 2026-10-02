@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 24px 20px 45px;
+    padding: 18px 15px 35px;
 
     position: relative;
     overflow-x: hidden;
@@ -25,7 +25,7 @@ body {
     background:
         radial-gradient(
             circle at 50% 45%,
-            rgba(184, 240, 0, 0.055),
+            rgba(184, 240, 0, 0.05),
             transparent 38%
         ),
         #050707;
@@ -35,7 +35,7 @@ body {
 
 
 /* ==========================================
-   DECORAÇÕES LATERAIS
+   DECORAÇÕES
 ========================================== */
 
 .decoracao {
@@ -43,49 +43,39 @@ body {
 
     pointer-events: none;
 
-    opacity: 0.55;
+    opacity: 0.5;
 
     z-index: 0;
 }
 
-
-/* LADO ESQUERDO */
-
 .decoracao-esquerda {
-    width: 240px;
-    height: 210px;
+    width: 200px;
+    height: 175px;
 
-    left: -100px;
+    left: -90px;
     top: -35px;
 
-    border-right: 48px solid #9dcc00;
-    border-bottom: 48px solid #9dcc00;
+    border-right: 40px solid #9dcc00;
+    border-bottom: 40px solid #9dcc00;
 
-    border-radius: 0 0 70px 0;
+    border-radius: 0 0 60px 0;
 
     transform: rotate(25deg);
-
-    filter: blur(0.2px);
 }
 
-
-/* LADO DIREITO */
-
 .decoracao-direita {
-    width: 240px;
-    height: 220px;
+    width: 200px;
+    height: 185px;
 
-    right: -115px;
-    bottom: -55px;
+    right: -100px;
+    bottom: -50px;
 
-    border-left: 48px solid #9dcc00;
-    border-top: 48px solid #9dcc00;
+    border-left: 40px solid #9dcc00;
+    border-top: 40px solid #9dcc00;
 
-    border-radius: 70px 0 0 0;
+    border-radius: 60px 0 0 0;
 
     transform: rotate(25deg);
-
-    filter: blur(0.2px);
 }
 
 
@@ -94,10 +84,11 @@ body {
 ========================================== */
 
 .container {
-    width: 870px;
+    width: 760px;
     max-width: 100%;
 
     position: relative;
+
     z-index: 2;
 
     margin: 0 auto;
@@ -110,15 +101,17 @@ body {
 
 .logo-area {
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 13px;
+    margin-bottom: 8px;
 }
 
 .logo-area img {
-    width: 225px;
-    max-width: 60%;
+    width: 190px;
+
+    max-width: 55%;
 
     height: auto;
 
@@ -138,33 +131,33 @@ body {
     justify-content: center;
     align-items: center;
 
-    gap: 17px;
+    gap: 12px;
 
-    margin-bottom: 23px;
+    margin-bottom: 17px;
 }
 
 .titulo-area h1 {
     color: #ffffff;
 
-    font-size: 40px;
+    font-size: 32px;
 
-    line-height: 1.04;
+    line-height: 1.05;
 
     font-weight: 750;
 
     text-align: center;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0.4px;
 }
 
 
 /* ==========================================
-   ÍCONE DA CALCULADORA
+   ÍCONE CALCULADORA
 ========================================== */
 
 .icone-calculadora {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
 
     flex-shrink: 0;
 }
@@ -185,13 +178,13 @@ body {
 
 
 /* ==========================================
-   CARD
+   CARD PRINCIPAL
 ========================================== */
 
 .formulario {
     width: 100%;
 
-    padding: 27px 38px 25px;
+    padding: 21px 30px 20px;
 
     background:
         linear-gradient(
@@ -202,11 +195,11 @@ body {
 
     border: 2px solid #b8f000;
 
-    border-radius: 19px;
+    border-radius: 16px;
 
     box-shadow:
-        0 0 28px rgba(184, 240, 0, 0.07),
-        inset 0 0 30px rgba(0, 0, 0, 0.35);
+        0 0 22px rgba(184, 240, 0, 0.06),
+        inset 0 0 25px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -216,17 +209,18 @@ body {
 
 .campo {
     display: flex;
+
     flex-direction: column;
 
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .campo label {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 
     color: #ffffff;
 
-    font-size: 19px;
+    font-size: 16px;
 
     font-weight: 650;
 }
@@ -240,19 +234,19 @@ input,
 select {
     width: 100%;
 
-    height: 59px;
+    height: 47px;
 
-    padding: 0 20px;
+    padding: 0 15px;
 
     border: 1px solid #53616a;
 
-    border-radius: 11px;
+    border-radius: 9px;
 
     background: #192126;
 
     color: #ffffff;
 
-    font-size: 18px;
+    font-size: 16px;
 
     font-weight: 500;
 
@@ -271,7 +265,7 @@ select:focus {
     border-color: #b8f000;
 
     box-shadow:
-        0 0 0 2px rgba(184, 240, 0, 0.13);
+        0 0 0 2px rgba(184, 240, 0, 0.12);
 }
 
 
@@ -285,12 +279,13 @@ select {
 
 select option {
     background: #192126;
+
     color: #ffffff;
 }
 
 
 /* ==========================================
-   INPUT DE DATA
+   DATA
 ========================================== */
 
 input[type="date"] {
@@ -316,26 +311,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .btn-calcular {
     width: 100%;
 
-    height: 52px;
+    height: 44px;
 
-    margin-top: 1px;
+    margin-top: 2px;
 
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    gap: 11px;
+    gap: 9px;
 
     border: none;
 
-    border-radius: 10px;
+    border-radius: 9px;
 
     background: #b8f000;
 
     color: #050505;
 
-    font-size: 18px;
+    font-size: 16px;
 
     font-weight: 800;
 
@@ -353,8 +348,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 ========================================== */
 
 .btn-calcular svg {
-    width: 23px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
 
     fill: none;
 
@@ -377,7 +372,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transform: translateY(-1px);
 
     box-shadow:
-        0 6px 22px rgba(184, 240, 0, 0.18);
+        0 5px 18px rgba(184, 240, 0, 0.16);
 }
 
 
@@ -397,35 +392,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado {
     width: 100%;
 
-    min-height: 58px;
+    margin-top: 15px;
 
-    margin-top: 20px;
-
-    padding: 11px 17px;
-
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
+    padding: 16px 17px;
 
     background: #0d1517;
 
     border: 1px solid #476000;
 
-    border-radius: 10px;
+    border-radius: 9px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
 }
 
 
 /* ==========================================
-   RESULTADO - ESQUERDA
+   RESULTADO INICIAL
 ========================================== */
 
-.resultado-esquerda {
+#resultado .resultado-esquerda {
+    width: 100%;
+
     display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
 
     align-items: center;
 
-    gap: 11px;
+    gap: 10px;
+
+    margin-bottom: 8px;
 }
 
 
@@ -434,8 +440,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 ========================================== */
 
 .resultado-icone {
-    width: 29px;
-    height: 29px;
+    width: 28px;
+    height: 28px;
 
     flex-shrink: 0;
 }
@@ -456,13 +462,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 /* ==========================================
-   TEXTO RESULTADO
+   TEXTO RESULTADO INICIAL
 ========================================== */
 
-.resultado-esquerda span {
+#resultado .resultado-esquerda span {
     color: #82919c;
 
-    font-size: 16px;
+    font-size: 15px;
 
     font-weight: 600;
 }
@@ -472,53 +478,191 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    VALOR INICIAL
 ========================================== */
 
-.valor-inicial {
+#resultado .valor-inicial {
+    display: block;
+
+    width: 100%;
+
     color: #b8f000;
 
     font-size: 21px;
 
     font-weight: 800;
+
+    text-align: center;
 }
 
 
 /* ==========================================
-   RESULTADO GERADO PELO SCRIPT.JS
+   TÍTULO DO RESULTADO
 ========================================== */
 
 #resultado h2 {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 14px 0;
+
     color: #b8f000;
 
-    margin-bottom: 11px;
+    font-size: 20px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    text-align: center;
 }
 
-#resultado p {
+
+/* ==========================================
+   CADA ITEM DO RESULTADO
+========================================== */
+
+#resultado .resultado-item {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================
+   NOME DO ITEM
+========================================== */
+
+#resultado .resultado-item strong {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 2px;
+
     color: #ffffff;
 
-    margin-bottom: 5px;
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-align: center;
 }
 
-#resultado .info {
+
+/* ==========================================
+   VALOR DO ITEM
+========================================== */
+
+#resultado .resultado-item span {
+    display: block;
+
+    width: 100%;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   INFORMAÇÃO VERDE
+========================================== */
+
+#resultado .resultado-item .info {
     color: #b8f000;
 
     font-weight: 600;
 }
 
-#resultado .valor {
-    color: #b8f000;
 
-    font-size: 31px;
-
-    font-weight: 800;
-
-    margin-top: 5px;
-}
+/* ==========================================
+   LINHA
+========================================== */
 
 #resultado hr {
+    display: block;
+
+    width: 100%;
+
     border: none;
 
     border-top: 1px solid #303a3d;
 
-    margin: 14px 0;
+    margin: 8px 0 14px;
+}
+
+
+/* ==========================================
+   RESULTADO DA MULTA
+========================================== */
+
+#resultado .resultado-multa {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   TEXTO "VALOR DA MULTA"
+========================================== */
+
+#resultado .resultado-multa > strong {
+    display: block;
+
+    width: 100%;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   VALOR FINAL DA MULTA
+========================================== */
+
+#resultado .resultado-multa .valor {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    color: #b8f000;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    text-align: center;
 }
 
 
@@ -529,98 +673,106 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media (max-width: 700px) {
 
     body {
-        padding: 20px 12px 30px;
+        padding: 15px 10px 25px;
 
         align-items: flex-start;
     }
 
     .container {
-        margin-top: 5px;
+        margin-top: 3px;
     }
 
     .logo-area {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .logo-area img {
-        width: 160px;
+        width: 150px;
     }
 
     .titulo-area {
-        gap: 9px;
+        gap: 7px;
 
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .titulo-area h1 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .icone-calculadora {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
     }
 
     .formulario {
-        padding: 22px 18px;
+        padding: 18px 15px;
 
-        border-radius: 15px;
+        border-radius: 14px;
     }
 
     .campo {
-        margin-bottom: 17px;
+        margin-bottom: 13px;
     }
 
     .campo label {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     input,
     select {
-        height: 51px;
+        height: 45px;
 
-        padding: 0 15px;
+        padding: 0 13px;
+
+        font-size: 15px;
+    }
+
+    .btn-calcular {
+        height: 43px;
 
         font-size: 16px;
     }
 
-    .btn-calcular {
-        height: 50px;
-
-        font-size: 17px;
-    }
-
     .btn-calcular svg {
-        width: 22px;
-        height: 22px;
+        width: 19px;
+        height: 19px;
     }
 
     #resultado {
-        min-height: 55px;
+        margin-top: 14px;
 
-        padding: 10px 12px;
-
-        margin-top: 17px;
+        padding: 14px 13px;
     }
 
-    .resultado-esquerda {
-        gap: 8px;
+    #resultado .resultado-esquerda {
+        justify-content: center;
+
+        margin-bottom: 7px;
     }
 
-    .resultado-esquerda span {
+    #resultado .resultado-esquerda span {
         font-size: 14px;
     }
 
-    .resultado-icone {
-        width: 26px;
-        height: 26px;
-    }
-
-    .valor-inicial {
+    #resultado h2 {
         font-size: 18px;
     }
 
+    #resultado .resultado-item strong,
+    #resultado .resultado-item span {
+        font-size: 14px;
+    }
+
+    #resultado .valor-inicial {
+        font-size: 19px;
+    }
+
+    #resultado .resultado-multa .valor {
+        font-size: 23px;
+    }
+
     .decoracao {
-        opacity: 0.25;
+        opacity: 0.22;
     }
 }
