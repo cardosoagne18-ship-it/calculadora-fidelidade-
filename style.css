@@ -776,3 +776,74 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         opacity: 0.22;
     }
 }
+/* ==========================================
+   RESULTADO - LAYOUT VERTICAL
+========================================== */
+
+#resultado {
+    width: 100%;
+    margin-top: 15px;
+    padding: 16px 18px;
+    background: #0d1517;
+    border: 1px solid #476000;
+    border-radius: 9px;
+
+    display: block !important;
+
+    text-align: left;
+}
+
+#resultado h2 {
+    display: block !important;
+    width: 100%;
+    margin: 0 0 14px 0;
+
+    color: #b8f000;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+#resultado p {
+    display: block !important;
+    width: 100%;
+
+    margin: 0 0 8px 0;
+
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.45;
+    text-align: left;
+}
+
+#resultado p strong {
+    font-weight: 700;
+}
+
+#resultado .info {
+    color: #b8f000;
+    font-weight: 600;
+}
+
+#resultado hr {
+    display: block !important;
+    width: 100%;
+
+    margin: 13px 0;
+
+    border: none;
+    border-top: 1px solid #303a3d;
+}
+
+#resultado .valor {
+    display: block !important;
+    width: 100%;
+
+    margin: 4px 0 0 0;
+
+    color: #b8f000;
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 800;
+    text-align: left;
+}
