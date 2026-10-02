@@ -5,188 +5,615 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+
+/* ==========================================
+   FUNDO
+========================================== */
+
 body {
-    background: #0b0b0b;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 24px 20px 45px;
+
+    position: relative;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(184, 240, 0, 0.055),
+            transparent 38%
+        ),
+        #050707;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   DECORAÇÕES LATERAIS
+========================================== */
+
+.decoracao {
+    position: fixed;
+
+    pointer-events: none;
+
+    opacity: 0.55;
+
+    z-index: 0;
+}
+
+
+/* LADO ESQUERDO */
+
+.decoracao-esquerda {
+    width: 240px;
+    height: 210px;
+
+    left: -100px;
+    top: -35px;
+
+    border-right: 48px solid #9dcc00;
+    border-bottom: 48px solid #9dcc00;
+
+    border-radius: 0 0 70px 0;
+
+    transform: rotate(25deg);
+
+    filter: blur(0.2px);
+}
+
+
+/* LADO DIREITO */
+
+.decoracao-direita {
+    width: 240px;
+    height: 220px;
+
+    right: -115px;
+    bottom: -55px;
+
+    border-left: 48px solid #9dcc00;
+    border-top: 48px solid #9dcc00;
+
+    border-radius: 70px 0 0 0;
+
+    transform: rotate(25deg);
+
+    filter: blur(0.2px);
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+    width: 870px;
+    max-width: 100%;
+
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+
+    margin-bottom: 13px;
+}
+
+.logo-area img {
+    width: 225px;
+    max-width: 60%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.titulo-area {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 23px;
+}
+
+.titulo-area h1 {
     color: #ffffff;
-    padding: 20px;
-}
 
-/* CARD PRINCIPAL */
-.container {
-    width: 520px;
-    max-width: 100%;
-    background: #050505;
-    padding: 30px;
-    border-radius: 12px;
+    font-size: 40px;
 
-    /* Borda verde */
-    border: 2px solid #b8d000;
+    line-height: 1.04;
 
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
-}
+    font-weight: 750;
 
-/* TÍTULO */
-h1 {
     text-align: center;
-    margin-bottom: 25px;
-    color: #ffffff;
-    font-size: 26px;
+
+    letter-spacing: -0.5px;
 }
 
-/* CAMPOS */
+
+/* ==========================================
+   ÍCONE DA CALCULADORA
+========================================== */
+
+.icone-calculadora {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+}
+
+.icone-calculadora svg {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: #b8f000;
+
+    stroke-width: 2.2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.formulario {
+    width: 100%;
+
+    padding: 27px 38px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #080d0e,
+            #050909
+        );
+
+    border: 2px solid #b8f000;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0 0 28px rgba(184, 240, 0, 0.07),
+        inset 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
 .campo {
     display: flex;
     flex-direction: column;
-    margin-bottom: 18px;
+
+    margin-bottom: 20px;
 }
 
-label {
+.campo label {
     margin-bottom: 7px;
-    font-size: 15px;
-    font-weight: 600;
+
     color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 650;
 }
 
-/* INPUTS E SELECT */
+
+/* ==========================================
+   INPUTS
+========================================== */
+
 input,
 select {
     width: 100%;
-    padding: 12px;
 
-    border: 1px solid #4a4a4a;
-    border-radius: 8px;
+    height: 59px;
 
-    background: #1a1d21;
+    padding: 0 20px;
+
+    border: 1px solid #53616a;
+
+    border-radius: 11px;
+
+    background: #192126;
+
     color: #ffffff;
 
-    font-size: 16px;
+    font-size: 18px;
+
+    font-weight: 500;
+
     outline: none;
+
+    transition: 0.2s;
 }
 
-/* Quando clicar no campo */
+
+/* ==========================================
+   FOCO
+========================================== */
+
 input:focus,
 select:focus {
-    border-color: #b8d000;
+    border-color: #b8f000;
 
     box-shadow:
-        0 0 0 2px rgba(184, 208, 0, 0.25);
+        0 0 0 2px rgba(184, 240, 0, 0.13);
 }
 
-/* SELECT */
+
+/* ==========================================
+   SELECT
+========================================== */
+
 select {
     cursor: pointer;
 }
 
-/* OPÇÕES DO SELECT */
 select option {
-    background: #1a1d21;
+    background: #192126;
     color: #ffffff;
 }
 
-/* BOTÃO CALCULAR */
-button {
+
+/* ==========================================
+   INPUT DE DATA
+========================================== */
+
+input[type="date"] {
+    color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+
+    filter:
+        invert(78%)
+        sepia(100%)
+        saturate(900%)
+        hue-rotate(22deg)
+        brightness(105%);
+}
+
+
+/* ==========================================
+   BOTÃO
+========================================== */
+
+.btn-calcular {
     width: 100%;
-    padding: 13px;
+
+    height: 64px;
+
+    margin-top: 1px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
 
     border: none;
-    border-radius: 8px;
 
-    background: #b8d000;
-    color: #000000;
+    border-radius: 12px;
 
-    font-size: 16px;
-    font-weight: bold;
+    background: #b8f000;
+
+    color: #050505;
+
+    font-size: 22px;
+
+    font-weight: 800;
 
     cursor: pointer;
-    transition: 0.2s;
+
+    transition:
+        background 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
-/* Efeito ao passar o mouse */
-button:hover {
-    background: #c5df00;
+
+/* ==========================================
+   ÍCONE DO BOTÃO
+========================================== */
+
+.btn-calcular svg {
+    width: 28px;
+    height: 28px;
+
+    fill: none;
+
+    stroke: #050505;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.btn-calcular:hover {
+    background: #c6ff00;
+
     transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 22px rgba(184, 240, 0, 0.18);
 }
 
-/* Efeito ao clicar */
-button:active {
+
+/* ==========================================
+   CLIQUE
+========================================== */
+
+.btn-calcular:active {
     transform: translateY(0);
 }
 
-/* ÁREA DO RESULTADO */
+
+/* ==========================================
+   RESULTADO
+========================================== */
+
 #resultado {
-    margin-top: 20px;
-    padding: 20px;
+    width: 100%;
 
-    background: #111500;
+    min-height: 78px;
 
-    border-radius: 10px;
+    margin-top: 27px;
 
-    border-left: 5px solid #b8d000;
+    padding: 14px 21px;
 
-    line-height: 1.8;
-    color: #ffffff;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: #0d1517;
+
+    border: 1px solid #476000;
+
+    border-radius: 12px;
 }
 
-/* TÍTULO DO RESULTADO */
-#resultado h2 {
-    color: #b8d000;
-    margin-bottom: 12px;
+
+/* ==========================================
+   RESULTADO - ESQUERDA
+========================================== */
+
+.resultado-esquerda {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
 }
 
-/* PARÁGRAFOS */
-#resultado p {
-    margin-bottom: 5px;
+
+/* ==========================================
+   ÍCONE DO RESULTADO
+========================================== */
+
+.resultado-icone {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
 }
 
-/* INFORMAÇÕES DESTACADAS */
-.info {
-    color: #b8d000;
+.resultado-icone svg {
+    width: 100%;
+    height: 100%;
+
+    fill: none;
+
+    stroke: #b8f000;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ==========================================
+   TEXTO RESULTADO
+========================================== */
+
+.resultado-esquerda span {
+    color: #82919c;
+
+    font-size: 19px;
+
     font-weight: 600;
 }
 
-/* VALOR DA MULTA */
-.valor {
-    font-size: 28px;
-    font-weight: bold;
-    color: #b8d000;
+
+/* ==========================================
+   VALOR INICIAL
+========================================== */
+
+.valor-inicial {
+    color: #b8f000;
+
+    font-size: 27px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================
+   RESULTADO GERADO PELO SCRIPT.JS
+========================================== */
+
+#resultado h2 {
+    color: #b8f000;
+
+    margin-bottom: 11px;
+}
+
+#resultado p {
+    color: #ffffff;
+
+    margin-bottom: 5px;
+}
+
+#resultado .info {
+    color: #b8f000;
+
+    font-weight: 600;
+}
+
+#resultado .valor {
+    color: #b8f000;
+
+    font-size: 31px;
+
+    font-weight: 800;
+
     margin-top: 5px;
 }
 
-/* LINHA */
-hr {
+#resultado hr {
     border: none;
-    border-top: 1px solid #333333;
-    margin: 15px 0;
+
+    border-top: 1px solid #303a3d;
+
+    margin: 14px 0;
 }
 
-/* PLACEHOLDER */
-input::placeholder {
-    color: #a8a8a8;
-}
 
-/* ÍCONE DO CALENDÁRIO */
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(78%) sepia(100%) saturate(500%) hue-rotate(20deg);
-    cursor: pointer;
-}
+/* ==========================================
+   RESPONSIVO
+========================================== */
 
-/* RESPONSIVO */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px 30px;
+
+        align-items: flex-start;
+    }
 
     .container {
-        padding: 22px;
-        border-radius: 10px;
+        margin-top: 5px;
     }
 
-    h1 {
-        font-size: 22px;
+    .logo-area {
+        margin-bottom: 8px;
     }
 
-    .valor {
-        font-size: 24px;
+    .logo-area img {
+        width: 160px;
+    }
+
+    .titulo-area {
+        gap: 9px;
+
+        margin-bottom: 20px;
+    }
+
+    .titulo-area h1 {
+        font-size: 25px;
+    }
+
+    .icone-calculadora {
+        width: 36px;
+        height: 36px;
+    }
+
+    .formulario {
+        padding: 22px 18px;
+
+        border-radius: 15px;
+    }
+
+    .campo {
+        margin-bottom: 17px;
+    }
+
+    .campo label {
+        font-size: 16px;
+    }
+
+    input,
+    select {
+        height: 51px;
+
+        padding: 0 15px;
+
+        font-size: 16px;
+    }
+
+    .btn-calcular {
+        height: 55px;
+
+        font-size: 19px;
+    }
+
+    #resultado {
+        min-height: 65px;
+
+        padding: 11px 13px;
+    }
+
+    .resultado-esquerda {
+        gap: 9px;
+    }
+
+    .resultado-esquerda span {
+        font-size: 14px;
+    }
+
+    .resultado-icone {
+        width: 28px;
+        height: 28px;
+    }
+
+    .valor-inicial {
+        font-size: 19px;
+    }
+
+    .decoracao {
+        opacity: 0.25;
     }
 }
