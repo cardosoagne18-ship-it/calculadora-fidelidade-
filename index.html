@@ -12,10 +12,6 @@
 
 <body>
 
-    <!-- ELEMENTOS DECORATIVOS -->
-    <div class="decoracao decoracao-esquerda"></div>
-    <div class="decoracao decoracao-direita"></div>
-
     <main class="container">
 
         <!-- LOGO YO TELECOM -->
@@ -27,8 +23,7 @@
         <div class="titulo-area">
 
             <div class="icone-calculadora">
-
-                <svg viewBox="0 0 24 24">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                     <rect x="5" y="2" width="14" height="20" rx="2"></rect>
                     <line x1="8" y1="6" x2="16" y2="6"></line>
 
@@ -37,13 +32,9 @@
                     <circle cx="9" cy="16" r="1"></circle>
                     <circle cx="15" cy="16" r="1"></circle>
                 </svg>
-
             </div>
 
-            <h1>
-                Calculadora de Multa de<br>
-                Fidelidade
-            </h1>
+            <h1>Calculadora de Multa de Fidelidade</h1>
 
         </div>
 
@@ -58,19 +49,9 @@
                 </label>
 
                 <select id="multaTotal">
-
-                    <option value="300">
-                        R$ 300,00
-                    </option>
-
-                    <option value="900">
-                        R$ 900,00
-                    </option>
-
-                    <option value="1500">
-                        R$ 1.500,00
-                    </option>
-
+                    <option value="300">R$ 300,00</option>
+                    <option value="900">R$ 900,00</option>
+                    <option value="1500">R$ 1.500,00</option>
                 </select>
 
             </div>
@@ -126,7 +107,7 @@
                 onclick="calcular()"
             >
 
-                <svg viewBox="0 0 24 24">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                     <rect x="5" y="2" width="14" height="20" rx="2"></rect>
                     <line x1="8" y1="6" x2="16" y2="6"></line>
 
@@ -143,29 +124,44 @@
             <!-- RESULTADO -->
             <div id="resultado">
 
-                <div class="resultado-esquerda">
+                <h2>Resultado</h2>
 
-                    <div class="resultado-icone">
-
-                        <svg viewBox="0 0 24 24">
-                            <rect x="5" y="2" width="14" height="20" rx="2"></rect>
-                            <line x1="8" y1="6" x2="16" y2="6"></line>
-
-                            <circle cx="9" cy="11" r="1"></circle>
-                            <circle cx="15" cy="11" r="1"></circle>
-                            <circle cx="9" cy="16" r="1"></circle>
-                            <circle cx="15" cy="16" r="1"></circle>
-                        </svg>
-
-                    </div>
-
-                    <span>Resultado da Multa</span>
-
+                <div class="resultado-item">
+                    <strong>Multa contratual:</strong>
+                    <span>R$ 0,00</span>
                 </div>
 
-                <strong class="valor-inicial">
-                    R$ 0,00
-                </strong>
+                <div class="resultado-item">
+                    <strong>Dias utilizados:</strong>
+                    <span>0</span>
+                </div>
+
+                <div class="resultado-item">
+                    <strong>Tempo utilizado:</strong>
+                    <span class="info">0 meses e 0 dias</span>
+                </div>
+
+                <div class="resultado-item">
+                    <strong>Dias restantes:</strong>
+                    <span>0</span>
+                </div>
+
+                <div class="resultado-item">
+                    <strong>Tempo restante:</strong>
+                    <span class="info">0 meses e 0 dias</span>
+                </div>
+
+                <hr>
+
+                <div class="resultado-multa">
+
+                    <strong>Valor da Multa:</strong>
+
+                    <span class="valor">
+                        R$ 0,00
+                    </span>
+
+                </div>
 
             </div>
 

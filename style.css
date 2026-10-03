@@ -1,3 +1,7 @@
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,9 +10,9 @@
 }
 
 
-/* ==========================================
+/* =========================================================
    FUNDO
-========================================== */
+========================================================= */
 
 body {
     min-height: 100vh;
@@ -17,147 +21,103 @@ body {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 18px 15px 35px;
-
-    position: relative;
-    overflow-x: hidden;
+    padding: 16px 15px 35px;
 
     background:
         radial-gradient(
-            circle at 50% 45%,
-            rgba(184, 240, 0, 0.05),
+            circle at 50% 40%,
+            rgba(184, 240, 0, 0.035),
             transparent 38%
         ),
         #050707;
 
     color: #ffffff;
+
+    overflow-x: hidden;
 }
 
 
-/* ==========================================
-   DECORAÇÕES
-========================================== */
-
-.decoracao {
-    position: fixed;
-
-    pointer-events: none;
-
-    opacity: 0.5;
-
-    z-index: 0;
-}
-
-.decoracao-esquerda {
-    width: 200px;
-    height: 175px;
-
-    left: -90px;
-    top: -35px;
-
-    border-right: 40px solid #9dcc00;
-    border-bottom: 40px solid #9dcc00;
-
-    border-radius: 0 0 60px 0;
-
-    transform: rotate(25deg);
-}
-
-.decoracao-direita {
-    width: 200px;
-    height: 185px;
-
-    right: -100px;
-    bottom: -50px;
-
-    border-left: 40px solid #9dcc00;
-    border-top: 40px solid #9dcc00;
-
-    border-radius: 60px 0 0 0;
-
-    transform: rotate(25deg);
-}
-
-
-/* ==========================================
+/* =========================================================
    CONTAINER
-========================================== */
+========================================================= */
 
 .container {
-    width: 760px;
+    width: 900px;
     max-width: 100%;
 
-    position: relative;
-
-    z-index: 2;
-
     margin: 0 auto;
+
+    position: relative;
+    z-index: 2;
 }
 
 
-/* ==========================================
-   LOGO
-========================================== */
+/* =========================================================
+   LOGO YO TELECOM
+========================================================= */
 
 .logo-area {
-    display: flex;
+    width: 100%;
 
+    display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 8px;
+    margin-bottom: 13px;
+
+    overflow: visible;
 }
 
 .logo-area img {
-    width: 190px;
-
-    max-width: 55%;
+    width: 285px;
+    max-width: 70%;
 
     height: auto;
 
     display: block;
 
     object-fit: contain;
+    object-position: center;
 }
 
 
-/* ==========================================
+/* =========================================================
    TÍTULO
-========================================== */
+========================================================= */
 
 .titulo-area {
-    display: flex;
+    width: 100%;
 
+    display: flex;
     justify-content: center;
     align-items: center;
 
-    gap: 12px;
+    gap: 14px;
 
-    margin-bottom: 17px;
+    margin-bottom: 19px;
 }
 
 .titulo-area h1 {
     color: #ffffff;
 
-    font-size: 32px;
-
-    line-height: 1.05;
+    font-size: 33px;
+    line-height: 1.08;
 
     font-weight: 750;
 
     text-align: center;
 
-    letter-spacing: -0.4px;
+    letter-spacing: -0.5px;
 }
 
 
-/* ==========================================
-   ÍCONE CALCULADORA
-========================================== */
+/* =========================================================
+   ÍCONE DA CALCULADORA
+========================================================= */
 
 .icone-calculadora {
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
 
     flex-shrink: 0;
 }
@@ -170,21 +130,21 @@ body {
 
     stroke: #b8f000;
 
-    stroke-width: 2.2;
+    stroke-width: 2.3;
 
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 
-/* ==========================================
+/* =========================================================
    CARD PRINCIPAL
-========================================== */
+========================================================= */
 
 .formulario {
     width: 100%;
 
-    padding: 21px 30px 20px;
+    padding: 25px 38px 29px;
 
     background:
         linear-gradient(
@@ -195,98 +155,96 @@ body {
 
     border: 2px solid #b8f000;
 
-    border-radius: 16px;
+    border-radius: 17px;
 
     box-shadow:
-        0 0 22px rgba(184, 240, 0, 0.06),
+        0 0 22px rgba(184, 240, 0, 0.05),
         inset 0 0 25px rgba(0, 0, 0, 0.35);
 }
 
 
-/* ==========================================
+/* =========================================================
    CAMPOS
-========================================== */
+========================================================= */
 
 .campo {
-    display: flex;
+    width: 100%;
 
+    display: flex;
     flex-direction: column;
 
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 }
 
 .campo label {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 
     color: #ffffff;
 
-    font-size: 16px;
+    font-size: 20px;
 
-    font-weight: 650;
+    font-weight: 700;
+
+    line-height: 1.2;
 }
 
 
-/* ==========================================
-   INPUTS
-========================================== */
+/* =========================================================
+   INPUTS E SELECT
+========================================================= */
 
 input,
 select {
     width: 100%;
+    height: 57px;
 
-    height: 47px;
+    padding: 0 19px;
 
-    padding: 0 15px;
-
-    border: 1px solid #53616a;
+    border: 1px solid #4c5961;
 
     border-radius: 9px;
 
-    background: #192126;
+    background: #10171b;
 
     color: #ffffff;
 
-    font-size: 16px;
+    font-size: 20px;
 
     font-weight: 500;
 
     outline: none;
 
-    transition: 0.2s;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
-
-
-/* ==========================================
-   FOCO
-========================================== */
 
 input:focus,
 select:focus {
     border-color: #b8f000;
 
     box-shadow:
-        0 0 0 2px rgba(184, 240, 0, 0.12);
+        0 0 0 2px rgba(184, 240, 0, 0.10);
 }
 
 
-/* ==========================================
+/* =========================================================
    SELECT
-========================================== */
+========================================================= */
 
 select {
     cursor: pointer;
 }
 
 select option {
-    background: #192126;
-
+    background: #10171b;
     color: #ffffff;
 }
 
 
-/* ==========================================
-   DATA
-========================================== */
+/* =========================================================
+   CAMPOS DE DATA
+========================================================= */
 
 input[type="date"] {
     color-scheme: dark;
@@ -304,67 +262,40 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-/* ==========================================
+/* =========================================================
    BOTÃO CALCULAR
-========================================== */
+========================================================= */
 
 .btn-calcular {
     width: 100%;
+    height: 58px;
 
-    height: 44px;
-
-    margin-top: 2px;
+    margin-top: 1px;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    gap: 9px;
+    gap: 10px;
 
     border: none;
-
-    border-radius: 9px;
+    border-radius: 10px;
 
     background: #b8f000;
 
     color: #050505;
 
-    font-size: 16px;
+    font-size: 21px;
 
     font-weight: 800;
 
     cursor: pointer;
 
     transition:
-        background 0.2s,
-        transform 0.2s,
-        box-shadow 0.2s;
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
-
-
-/* ==========================================
-   ÍCONE DO BOTÃO
-========================================== */
-
-.btn-calcular svg {
-    width: 20px;
-    height: 20px;
-
-    fill: none;
-
-    stroke: #050505;
-
-    stroke-width: 2;
-
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-
-/* ==========================================
-   HOVER
-========================================== */
 
 .btn-calcular:hover {
     background: #c6ff00;
@@ -375,136 +306,125 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         0 5px 18px rgba(184, 240, 0, 0.16);
 }
 
-
-/* ==========================================
-   CLIQUE
-========================================== */
-
 .btn-calcular:active {
     transform: translateY(0);
 }
 
 
-/* ==========================================
-   RESULTADO
-========================================== */
+/* =========================================================
+   ÍCONE DO BOTÃO
+========================================================= */
 
-#resultado {
-    width: 100%;
-
-    margin-top: 15px;
-
-    padding: 16px 17px;
-
-    background: #0d1517;
-
-    border: 1px solid #476000;
-
-    border-radius: 9px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: flex-start;
-
-    text-align: center;
-}
-
-
-/* ==========================================
-   RESULTADO INICIAL
-========================================== */
-
-#resultado .resultado-esquerda {
-    width: 100%;
-
-    display: flex;
-
-    flex-direction: row;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-bottom: 8px;
-}
-
-
-/* ==========================================
-   ÍCONE DO RESULTADO
-========================================== */
-
-.resultado-icone {
-    width: 28px;
-    height: 28px;
-
-    flex-shrink: 0;
-}
-
-.resultado-icone svg {
-    width: 100%;
-    height: 100%;
+.btn-calcular svg {
+    width: 25px;
+    height: 25px;
 
     fill: none;
 
-    stroke: #b8f000;
+    stroke: #050505;
 
-    stroke-width: 2;
+    stroke-width: 2.2;
 
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 
-/* ==========================================
-   TEXTO RESULTADO INICIAL
-========================================== */
+/* =========================================================
+   RESULTADO
+========================================================= */
 
-#resultado .resultado-esquerda span {
-    color: #82919c;
-
-    font-size: 15px;
-
-    font-weight: 600;
-}
-
-
-/* ==========================================
-   VALOR INICIAL
-========================================== */
-
-#resultado .valor-inicial {
-    display: block;
-
+#resultado {
     width: 100%;
 
-    color: #b8f000;
+    margin-top: 22px;
 
-    font-size: 21px;
+    padding: 17px 29px 22px;
 
-    font-weight: 800;
+    background:
+        linear-gradient(
+            145deg,
+            #0c1417,
+            #090f11
+        );
 
-    text-align: center;
+    border: 2px solid #b8f000;
+
+    border-radius: 15px;
+
+    display: block;
+
+    text-align: left;
 }
 
 
-/* ==========================================
-   TÍTULO DO RESULTADO
-========================================== */
+/* =========================================================
+   TÍTULO "RESULTADO"
+========================================================= */
 
 #resultado h2 {
-    display: block;
-
     width: 100%;
 
-    margin: 0 0 14px 0;
+    margin: 0 0 8px;
 
-    color: #b8f000;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #59636a;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    line-height: 1.15;
+
+    font-weight: 750;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   LINHAS DO RESULTADO
+========================================================= */
+
+#resultado .resultado-item {
+    width: 100%;
+
+    min-height: 49px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px dashed #41494d;
+}
+
+
+/* =========================================================
+   TEXTO DOS RESULTADOS
+========================================================= */
+
+#resultado .resultado-item strong {
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.2;
+
+    font-weight: 650;
+
+    text-align: left;
+}
+
+#resultado .resultado-item span {
+    color: #ffffff;
 
     font-size: 20px;
 
@@ -512,102 +432,82 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     font-weight: 700;
 
-    text-align: center;
+    text-align: right;
 }
 
 
-/* ==========================================
-   CADA ITEM DO RESULTADO
-========================================== */
-
-#resultado .resultado-item {
-    width: 100%;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    margin-bottom: 10px;
-}
-
-
-/* ==========================================
-   NOME DO ITEM
-========================================== */
-
-#resultado .resultado-item strong {
-    display: block;
-
-    width: 100%;
-
-    margin-bottom: 2px;
-
-    color: #ffffff;
-
-    font-size: 15px;
-
-    font-weight: 700;
-
-    text-align: center;
-}
-
-
-/* ==========================================
-   VALOR DO ITEM
-========================================== */
-
-#resultado .resultado-item span {
-    display: block;
-
-    width: 100%;
-
-    color: #ffffff;
-
-    font-size: 15px;
-
-    line-height: 1.4;
-
-    text-align: center;
-}
-
-
-/* ==========================================
-   INFORMAÇÃO VERDE
-========================================== */
+/* =========================================================
+   TEXTOS VERDES
+========================================================= */
 
 #resultado .resultado-item .info {
     color: #b8f000;
 
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
-/* ==========================================
-   LINHA
-========================================== */
+/* =========================================================
+   BARRA DE PROGRESSO
+========================================================= */
+
+/*
+   Esta barra é apenas visual.
+   O JavaScript permanece completamente intacto.
+*/
+
+#resultado .resultado-item:nth-of-type(2) {
+    position: relative;
+
+    margin-bottom: 12px;
+}
+
+#resultado .resultado-item:nth-of-type(2)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: -6px;
+
+    height: 7px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            to right,
+            #b8f000 0%,
+            #b8f000 68%,
+            #182126 68%,
+            #182126 100%
+        );
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   LINHA FINAL
+========================================================= */
 
 #resultado hr {
-    display: block;
-
     width: 100%;
+
+    margin: 15px 0 20px;
 
     border: none;
 
-    border-top: 1px solid #303a3d;
-
-    margin: 8px 0 14px;
+    border-top: 1px dashed #697176;
 }
 
 
-/* ==========================================
-   RESULTADO DA MULTA
-========================================== */
+/* =========================================================
+   VALOR DA MULTA
+========================================================= */
 
 #resultado .resultado-multa {
     width: 100%;
@@ -623,81 +523,79 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-align: center;
 }
 
-
-/* ==========================================
-   TEXTO "VALOR DA MULTA"
-========================================== */
-
 #resultado .resultado-multa > strong {
-    display: block;
-
-    width: 100%;
-
     color: #ffffff;
 
-    font-size: 15px;
+    font-size: 26px;
 
-    font-weight: 700;
+    line-height: 1.2;
 
-    text-align: center;
+    font-weight: 750;
 }
 
 
-/* ==========================================
-   VALOR FINAL DA MULTA
-========================================== */
+/* =========================================================
+   VALOR FINAL
+========================================================= */
 
 #resultado .resultado-multa .valor {
     display: block;
 
     width: 100%;
 
-    margin-top: 5px;
+    margin-top: 7px;
 
     color: #b8f000;
 
-    font-size: 27px;
+    font-size: 42px;
 
-    line-height: 1.2;
+    line-height: 1.1;
 
-    font-weight: 800;
+    font-weight: 850;
 
     text-align: center;
 }
 
 
-/* ==========================================
-   RESPONSIVO
-========================================== */
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
 
 @media (max-width: 700px) {
 
     body {
-        padding: 15px 10px 25px;
-
-        align-items: flex-start;
+        padding: 14px 10px 30px;
     }
 
     .container {
-        margin-top: 3px;
+        width: 100%;
     }
 
+
+    /* LOGO */
+
     .logo-area {
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
 
     .logo-area img {
-        width: 150px;
+        width: 220px;
+        max-width: 75%;
     }
 
+
+    /* TÍTULO */
+
     .titulo-area {
-        gap: 7px;
+        gap: 8px;
 
         margin-bottom: 15px;
     }
 
     .titulo-area h1 {
-        font-size: 24px;
+        font-size: 23px;
+
+        letter-spacing: -0.2px;
     }
 
     .icone-calculadora {
@@ -705,58 +603,137 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         height: 32px;
     }
 
+
+    /* CARD */
+
     .formulario {
-        padding: 18px 15px;
+        padding: 19px 15px 21px;
 
         border-radius: 14px;
     }
 
+
+    /* CAMPOS */
+
     .campo {
-        margin-bottom: 13px;
+        margin-bottom: 15px;
     }
 
     .campo label {
-        font-size: 15px;
+        font-size: 16px;
+
+        margin-bottom: 6px;
     }
+
+
+    /* INPUTS */
 
     input,
     select {
-        height: 45px;
+        height: 48px;
 
         padding: 0 13px;
 
-        font-size: 15px;
+        font-size: 16px;
+
+        border-radius: 8px;
     }
 
-    .btn-calcular {
-        height: 43px;
 
-        font-size: 16px;
+    /* BOTÃO */
+
+    .btn-calcular {
+        height: 49px;
+
+        font-size: 17px;
     }
 
     .btn-calcular svg {
-        width: 19px;
-        height: 19px;
+        width: 21px;
+        height: 21px;
     }
+
+
+    /* RESULTADO */
 
     #resultado {
-        margin-top: 14px;
+        margin-top: 16px;
 
-        padding: 14px 13px;
-    }
+        padding: 14px 14px 18px;
 
-    #resultado .resultado-esquerda {
-        justify-content: center;
-
-        margin-bottom: 7px;
-    }
-
-    #resultado .resultado-esquerda span {
-        font-size: 14px;
+        border-radius: 12px;
     }
 
     #resultado h2 {
-        font-size: 18px;
+        font-size: 21px;
+
+        margin-bottom: 7px;
+
+        padding-bottom: 7px;
+    }
+
+    #resultado .resultado-item {
+        min-height: 42px;
+
+        gap: 10px;
+
+        padding: 6px 0;
+    }
+
+    #resultado .resultado-item strong,
+    #resultado .resultado-item span {
+        font-size: 15px;
+    }
+
+    #resultado .resultado-item:nth-of-type(2)::after {
+        height: 6px;
+    }
+
+    #resultado hr {
+        margin: 13px 0 17px;
+    }
+
+    #resultado .resultado-multa > strong {
+        font-size: 20px;
+    }
+
+    #resultado .resultado-multa .valor {
+        font-size: 31px;
+    }
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo-area img {
+        width: 190px;
+        max-width: 75%;
+    }
+
+    .titulo-area {
+        gap: 6px;
+    }
+
+    .titulo-area h1 {
+        font-size: 20px;
+    }
+
+    .icone-calculadora {
+        width: 28px;
+        height: 28px;
+    }
+
+    .formulario {
+        padding: 17px 12px 19px;
+    }
+
+    #resultado {
+        padding-left: 11px;
+        padding-right: 11px;
     }
 
     #resultado .resultado-item strong,
@@ -764,86 +741,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-size: 14px;
     }
 
-    #resultado .valor-inicial {
-        font-size: 19px;
-    }
-
     #resultado .resultado-multa .valor {
-        font-size: 23px;
+        font-size: 27px;
     }
-
-    .decoracao {
-        opacity: 0.22;
-    }
-}
-/* ==========================================
-   RESULTADO - LAYOUT VERTICAL
-========================================== */
-
-#resultado {
-    width: 100%;
-    margin-top: 15px;
-    padding: 16px 18px;
-    background: #0d1517;
-    border: 1px solid #476000;
-    border-radius: 9px;
-
-    display: block !important;
-
-    text-align: left;
-}
-
-#resultado h2 {
-    display: block !important;
-    width: 100%;
-    margin: 0 0 14px 0;
-
-    color: #b8f000;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: left;
-}
-
-#resultado p {
-    display: block !important;
-    width: 100%;
-
-    margin: 0 0 8px 0;
-
-    color: #ffffff;
-    font-size: 15px;
-    line-height: 1.45;
-    text-align: left;
-}
-
-#resultado p strong {
-    font-weight: 700;
-}
-
-#resultado .info {
-    color: #b8f000;
-    font-weight: 600;
-}
-
-#resultado hr {
-    display: block !important;
-    width: 100%;
-
-    margin: 13px 0;
-
-    border: none;
-    border-top: 1px solid #303a3d;
-}
-
-#resultado .valor {
-    display: block !important;
-    width: 100%;
-
-    margin: 4px 0 0 0;
-
-    color: #b8f000;
-    font-size: 25px;
-    line-height: 1.2;
-    font-weight: 800;
-    text-align: left;
 }
