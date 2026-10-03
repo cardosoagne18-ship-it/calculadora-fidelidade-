@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+
     <title>Calculadora de Multa de Fidelidade</title>
 
     <link rel="stylesheet" href="style.css">
@@ -172,6 +173,30 @@
 
     <!-- SCRIPT ORIGINAL - NÃO ALTERAR -->
     <script src="script.js"></script>
+
+    <!-- BLOQUEIOS DE ATALHOS -->
+    <script>
+
+        // Bloqueia o menu do botão direito
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+        // Bloqueia atalhos comuns das ferramentas de desenvolvedor
+        document.addEventListener("keydown", function (e) {
+
+            if (
+                e.key === "F12" ||
+                (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase())) ||
+                (e.ctrlKey && e.key.toUpperCase() === "U")
+            ) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+        });
+
+    </script>
 
 </body>
 
