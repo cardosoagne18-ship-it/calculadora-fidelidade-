@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: flex-start;
 
-    padding: 16px 15px 35px;
+    padding: 8px 10px 20px;
 
     background:
         radial-gradient(
@@ -42,7 +42,7 @@ body {
 ========================================================= */
 
 .container {
-    width: 900px;
+    width: 450px;
     max-width: 100%;
 
     margin: 0 auto;
@@ -63,13 +63,13 @@ body {
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 13px;
+    margin-bottom: 7px;
 
     overflow: visible;
 }
 
 .logo-area img {
-    width: 285px;
+    width: 145px;
     max-width: 70%;
 
     height: auto;
@@ -92,22 +92,22 @@ body {
     justify-content: center;
     align-items: center;
 
-    gap: 14px;
+    gap: 7px;
 
-    margin-bottom: 19px;
+    margin-bottom: 9px;
 }
 
 .titulo-area h1 {
     color: #ffffff;
 
-    font-size: 33px;
+    font-size: 16px;
     line-height: 1.08;
 
     font-weight: 750;
 
     text-align: center;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
 }
 
 
@@ -116,8 +116,8 @@ body {
 ========================================================= */
 
 .icone-calculadora {
-    width: 43px;
-    height: 43px;
+    width: 22px;
+    height: 22px;
 
     flex-shrink: 0;
 }
@@ -144,7 +144,7 @@ body {
 .formulario {
     width: 100%;
 
-    padding: 25px 38px 29px;
+    padding: 13px 19px 15px;
 
     background:
         linear-gradient(
@@ -153,13 +153,13 @@ body {
             #050909
         );
 
-    border: 2px solid #b8f000;
+    border: 1px solid #b8f000;
 
-    border-radius: 17px;
+    border-radius: 9px;
 
     box-shadow:
-        0 0 22px rgba(184, 240, 0, 0.05),
-        inset 0 0 25px rgba(0, 0, 0, 0.35);
+        0 0 12px rgba(184, 240, 0, 0.05),
+        inset 0 0 13px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -173,15 +173,15 @@ body {
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .campo label {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 
     color: #ffffff;
 
-    font-size: 20px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -196,19 +196,19 @@ body {
 input,
 select {
     width: 100%;
-    height: 57px;
+    height: 29px;
 
-    padding: 0 19px;
+    padding: 0 10px;
 
     border: 1px solid #4c5961;
 
-    border-radius: 9px;
+    border-radius: 5px;
 
     background: #10171b;
 
     color: #ffffff;
 
-    font-size: 20px;
+    font-size: 10px;
 
     font-weight: 500;
 
@@ -224,7 +224,7 @@ select:focus {
     border-color: #b8f000;
 
     box-shadow:
-        0 0 0 2px rgba(184, 240, 0, 0.10);
+        0 0 0 1px rgba(184, 240, 0, 0.10);
 }
 
 
@@ -268,24 +268,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .btn-calcular {
     width: 100%;
-    height: 58px;
+    height: 29px;
 
-    margin-top: 1px;
+    margin-top: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 5px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 
     background: #b8f000;
 
     color: #050505;
 
-    font-size: 21px;
+    font-size: 10px;
 
     font-weight: 800;
 
@@ -303,7 +303,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transform: translateY(-1px);
 
     box-shadow:
-        0 5px 18px rgba(184, 240, 0, 0.16);
+        0 3px 9px rgba(184, 240, 0, 0.16);
 }
 
 .btn-calcular:active {
@@ -316,8 +316,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 ========================================================= */
 
 .btn-calcular svg {
-    width: 25px;
-    height: 25px;
+    width: 13px;
+    height: 13px;
 
     fill: none;
 
@@ -337,9 +337,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado {
     width: 100%;
 
-    margin-top: 22px;
+    margin-top: 9px;
 
-    padding: 17px 29px 22px;
+    padding: 9px 14px 11px;
 
     background:
         linear-gradient(
@@ -348,9 +348,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             #090f11
         );
 
-    border: 2px solid #b8f000;
+    border: 1px solid #b8f000;
 
-    border-radius: 15px;
+    border-radius: 8px;
 
     display: block;
 
@@ -359,21 +359,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 /* =========================================================
-   TÍTULO "RESULTADO"
+   TÍTULO RESULTADO
 ========================================================= */
 
 #resultado h2 {
     width: 100%;
 
-    margin: 0 0 8px;
+    margin: 0 0 4px;
 
-    padding-bottom: 9px;
+    padding-bottom: 5px;
 
     border-bottom: 1px solid #59636a;
 
     color: #ffffff;
 
-    font-size: 27px;
+    font-size: 14px;
 
     line-height: 1.15;
 
@@ -390,7 +390,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado .resultado-item {
     width: 100%;
 
-    min-height: 49px;
+    min-height: 25px;
 
     display: flex;
 
@@ -399,9 +399,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     align-items: center;
 
-    gap: 20px;
+    gap: 10px;
 
-    padding: 7px 0;
+    padding: 3px 0;
 
     border-bottom: 1px dashed #41494d;
 }
@@ -414,7 +414,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado .resultado-item strong {
     color: #ffffff;
 
-    font-size: 20px;
+    font-size: 10px;
 
     line-height: 1.2;
 
@@ -426,7 +426,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado .resultado-item span {
     color: #ffffff;
 
-    font-size: 20px;
+    font-size: 10px;
 
     line-height: 1.2;
 
@@ -451,15 +451,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    BARRA DE PROGRESSO
 ========================================================= */
 
-/*
-   Esta barra é apenas visual.
-   O JavaScript permanece completamente intacto.
-*/
-
 #resultado .resultado-item:nth-of-type(2) {
     position: relative;
 
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 #resultado .resultado-item:nth-of-type(2)::after {
@@ -470,11 +465,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 0;
     right: 0;
 
-    bottom: -6px;
+    bottom: -3px;
 
-    height: 7px;
+    height: 4px;
 
-    border-radius: 10px;
+    border-radius: 5px;
 
     background:
         linear-gradient(
@@ -497,7 +492,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado hr {
     width: 100%;
 
-    margin: 15px 0 20px;
+    margin: 7px 0 10px;
 
     border: none;
 
@@ -526,7 +521,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #resultado .resultado-multa > strong {
     color: #ffffff;
 
-    font-size: 26px;
+    font-size: 13px;
 
     line-height: 1.2;
 
@@ -543,11 +538,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     width: 100%;
 
-    margin-top: 7px;
+    margin-top: 3px;
 
     color: #b8f000;
 
-    font-size: 42px;
+    font-size: 21px;
 
     line-height: 1.1;
 
@@ -561,144 +556,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    RESPONSIVIDADE
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
 
     body {
-        padding: 14px 10px 30px;
+        padding: 8px 8px 20px;
     }
 
     .container {
-        width: 100%;
-    }
-
-
-    /* LOGO */
-
-    .logo-area {
-        margin-bottom: 10px;
+        width: 450px;
+        max-width: 100%;
     }
 
     .logo-area img {
-        width: 220px;
-        max-width: 75%;
-    }
-
-
-    /* TÍTULO */
-
-    .titulo-area {
-        gap: 8px;
-
-        margin-bottom: 15px;
-    }
-
-    .titulo-area h1 {
-        font-size: 23px;
-
-        letter-spacing: -0.2px;
-    }
-
-    .icone-calculadora {
-        width: 32px;
-        height: 32px;
-    }
-
-
-    /* CARD */
-
-    .formulario {
-        padding: 19px 15px 21px;
-
-        border-radius: 14px;
-    }
-
-
-    /* CAMPOS */
-
-    .campo {
-        margin-bottom: 15px;
-    }
-
-    .campo label {
-        font-size: 16px;
-
-        margin-bottom: 6px;
-    }
-
-
-    /* INPUTS */
-
-    input,
-    select {
-        height: 48px;
-
-        padding: 0 13px;
-
-        font-size: 16px;
-
-        border-radius: 8px;
-    }
-
-
-    /* BOTÃO */
-
-    .btn-calcular {
-        height: 49px;
-
-        font-size: 17px;
-    }
-
-    .btn-calcular svg {
-        width: 21px;
-        height: 21px;
-    }
-
-
-    /* RESULTADO */
-
-    #resultado {
-        margin-top: 16px;
-
-        padding: 14px 14px 18px;
-
-        border-radius: 12px;
-    }
-
-    #resultado h2 {
-        font-size: 21px;
-
-        margin-bottom: 7px;
-
-        padding-bottom: 7px;
-    }
-
-    #resultado .resultado-item {
-        min-height: 42px;
-
-        gap: 10px;
-
-        padding: 6px 0;
-    }
-
-    #resultado .resultado-item strong,
-    #resultado .resultado-item span {
-        font-size: 15px;
-    }
-
-    #resultado .resultado-item:nth-of-type(2)::after {
-        height: 6px;
-    }
-
-    #resultado hr {
-        margin: 13px 0 17px;
-    }
-
-    #resultado .resultado-multa > strong {
-        font-size: 20px;
-    }
-
-    #resultado .resultado-multa .valor {
-        font-size: 31px;
+        width: 145px;
+        max-width: 70%;
     }
 }
 
@@ -707,41 +578,50 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    TELAS MUITO PEQUENAS
 ========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
 
-    .logo-area img {
-        width: 190px;
-        max-width: 75%;
+    .container {
+        width: 100%;
     }
 
-    .titulo-area {
-        gap: 6px;
+    .logo-area img {
+        width: 125px;
     }
 
     .titulo-area h1 {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .icone-calculadora {
-        width: 28px;
-        height: 28px;
+        width: 19px;
+        height: 19px;
     }
 
     .formulario {
-        padding: 17px 12px 19px;
+        padding: 11px 13px 13px;
     }
 
-    #resultado {
-        padding-left: 11px;
-        padding-right: 11px;
+    .campo label {
+        font-size: 9px;
+    }
+
+    input,
+    select {
+        height: 27px;
+        font-size: 9px;
+    }
+
+    .btn-calcular {
+        height: 27px;
+        font-size: 9px;
     }
 
     #resultado .resultado-item strong,
     #resultado .resultado-item span {
-        font-size: 14px;
+        font-size: 9px;
     }
 
     #resultado .resultado-multa .valor {
-        font-size: 27px;
+        font-size: 19px;
     }
 }
