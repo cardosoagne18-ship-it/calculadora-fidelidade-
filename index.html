@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
 
     <title>Calculadora de Multa de Fidelidade</title>
 
@@ -82,8 +83,12 @@
                 </label>
 
                 <input
-                    type="date"
+                    type="text"
                     id="contrato"
+                    placeholder="dd/mm/aaaa"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="off"
                 >
 
             </div>
@@ -96,8 +101,12 @@
                 </label>
 
                 <input
-                    type="date"
+                    type="text"
                     id="cancelamento"
+                    placeholder="dd/mm/aaaa"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="off"
                 >
 
             </div>
@@ -171,7 +180,6 @@
 
     </main>
 
-    <!-- SCRIPT ORIGINAL - NÃO ALTERAR -->
     <script src="script.js"></script>
 
     <!-- BLOQUEIOS DE ATALHOS -->

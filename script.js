@@ -8,10 +8,10 @@ function calcular() {
         document.getElementById("fidelidade").value
     );
 
-    const contrato = document.getElementById("contrato").value;
-    const cancelamento = document.getElementById("cancelamento").value;
+    const contratoInput = document.getElementById("contrato").value;
+    const cancelamentoInput = document.getElementById("cancelamento").value;
 
-    if (!contrato || !cancelamento) {
+    if (!contratoInput || !cancelamentoInput) {
         alert("Informe as datas.");
         return;
     }
@@ -20,6 +20,38 @@ function calcular() {
         alert("Informe um período de fidelidade válido.");
         return;
     }
+
+    /*
+     * Converte DD/MM/AAAA para AAAA-MM-DD
+     * para manter a mesma lógica original da calculadora.
+     */
+
+    const contratoPartes = contratoInput.split("/");
+    const cancelamentoPartes = cancelamentoInput.split("/");
+
+    if (
+        contratoPartes.length !== 3 ||
+        cancelamentoPartes.length !== 3 ||
+        contratoPartes[0].length !== 2 ||
+        contratoPartes[1].length !== 2 ||
+        contratoPartes[2].length !== 4 ||
+        cancelamentoPartes[0].length !== 2 ||
+        cancelamentoPartes[1].length !== 2 ||
+        cancelamentoPartes[2].length !== 4
+    ) {
+        alert("Informe as datas no formato dd/mm/aaaa.");
+        return;
+    }
+
+    const contrato =
+        contratoPartes[2] + "-" +
+        contratoPartes[1] + "-" +
+        contratoPartes[0];
+
+    const cancelamento =
+        cancelamentoPartes[2] + "-" +
+        cancelamentoPartes[1] + "-" +
+        cancelamentoPartes[0];
 
     const dataContrato = contrato.split("-");
     const dataCancelamento = cancelamento.split("-");
@@ -122,3 +154,56 @@ function calcular() {
         </div>
     `;
 }
+
+
+// =========================================================
+// FORMATAÇÃO DAS DATAS
+// =========================================================
+
+function configurarData(id) {
+
+    const campo = document.getElementById(id);
+
+    campo.addEventListener("input", function () {
+
+        let valor = this.value.replace(/\D/g, "");
+
+        if (valor.length > 8) {
+            valor = valor.substring(0, 8);
+        }
+
+        if (valor.length > 4) {
+
+            valor =
+                valor.substring(0, 2) + "/" +
+                valor.substring(2, 4) + "/" +
+                valor.substring(4);
+
+        } else if (valor.length > 2) {
+
+            valor =
+                valor.substring(0, 2) + "/" +
+                valor.substring(2);
+
+        }
+
+        this.value = valor;
+    });
+
+
+    // Dois cliques selecionam a data inteira
+    campo.addEventListener("dblclick", function () {
+
+        this.focus();
+        this.select();
+
+        this.setSelectionRange(
+            0,
+            this.value.length
+        );
+    });
+}
+
+
+configurarData("contrato");
+configurarData("cancelamento");
